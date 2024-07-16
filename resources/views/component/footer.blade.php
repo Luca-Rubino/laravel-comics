@@ -51,7 +51,7 @@
     </section>
 
 
-    <section class="d-flex">
+    <section class="d-flex botton-footer">
 
         <article class="d-flex">
             <button>sing-up now!</button>
