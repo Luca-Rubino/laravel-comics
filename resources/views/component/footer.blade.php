@@ -5,33 +5,42 @@
             <nav>
                 <h2>dc comics</h2>
                 <ul>
-                    <li v-for="(title, index) in dcComicsLink">
-                        <a :href="title.link">title</a>
+                @foreach($dcComicsLinks as $dcComicsLink)
+                    <li>
+                        <a href="#">{{ $dcComicsLink['title'] }}</a>
                     </li>
+                @endforeach
+                    
                 </ul>
                 <h2>shop</h2>
                 <ul>
-                    <li v-for="title in shop">
-                        <a :href="title.link">title</a>
+                    @foreach($shops as $shop)
+                    <li>
+                        <a href="#">{{ $shop['title'] }}</a>
                     </li>
+                    @endforeach
                 </ul>
             </nav>
 
             <nav>
                 <h2>dc</h2>
                 <ul>
-                    <li v-for="title in dc">
-                        <a :href="title.link">title</a>
+                    @foreach($dcs as $dc)
+                    <li>
+                        <a href="#">{{ $dc['title'] }}</a>
                     </li>
+                    @endforeach
                 </ul>
             </nav>
 
             <nav>
                 <h2>sites</h2>
                 <ul>
-                    <li v-for="title in sites">
-                        <a :href="title.link">title</a>
+                    @foreach($sites as $site)
+                    <li>
+                        <a href="{{ $site['link'] }}">{{ $site['title'] }}</a>
                     </li>
+                    @endforeach
                 </ul>
             </nav>
             
@@ -50,11 +59,10 @@
 
         <article class="d-flex">
             <h2>follow us</h2>
-            <img src="{{ Vite::asset('resources/img/footer-facebook.png') }}">
-            <img src="{{ Vite::asset('resources/img/footer-twitter.png') }}">
-            <img src="{{ Vite::asset('resources/img/footer-youtube.png') }}">
-            <img src="{{ Vite::asset('resources/img/footer-pinterest.png') }}">
-            <img src="{{ Vite::asset('resources/img/footer-periscope.png') }}">
+            @foreach($socials as $social)
+                <img src="{{ $social['url'] }}" alt="{{ $social['social'] }}">   
+            @endforeach
+            
         </article>
 
     </section>
