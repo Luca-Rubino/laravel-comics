@@ -7,7 +7,7 @@
 
             <ul>
             @foreach($headerLinks as $headerLink)
-                <li>{{ $headerLink['title'] }}</li>
+                <li>{{$headerLink['title']}}</li>
             @endforeach
             </ul>
 
