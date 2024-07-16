@@ -15,68 +15,145 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $headerLinks = [
-        "id" => "1",
+        ["id" => "1",
         "title" => "characters",
         "active" => "false",
-        "link" => "#" ,
+        "link" => "#"],
     
-        "id" => "2",
+        ["id" => "2",
         "title" => "comics",
         "active" => "true",
-        "link" => "#" ,
+        "link" => "#"],
     
-        "id" => "3",
+        ["id" => "3",
         "title" => "movies",
         "active" => "false",
-        "link" => "#" ,
+        "link" => "#"],
     
-        "id" => "4",
+        ["id" => "4",
         "title" => "tv",
         "active" => "false",
-        "link" => "#",
+        "link" => "#"],
     
-        "id" => "5",
+        ["id" => "5",
         "title" => "games",
         "active" => "false",
-        "link" => "#",
+        "link" => "#"],
     
-        "id" => "6",
+        ["id" => "6",
         "title" => "collectibles",
         "active" => "false",
-        "link" => "#",
+        "link" => "#"],
     
-        "id" => "7",
+        ["id" => "7",
         "title" => "videos",
         "active" => "false",
-        "link" => "#",
+        "link" => "#"],
     
-        "id" => "8",
+        ["id" => "8",
         "title" => "fan",
         "active" => "false",
-        "link" => "#",
+        "link" => "#"],
     
-        "id" => "9",
+        ["id" => "9",
         "title" => "news",
         "active" => "false",
-        "link" => "#",
+        "link" => "#"],
     
-        "id" => "10",
+        ["id" => "10",
         "title" => "shop",
         "active" => "false",
-        "link" => "#",
+        "link" => "#"],
     ];
 
     $comics = [
-        "immagine" => "../../src/assets/img/buy-comics-digital-comics.png",
-        "titolo" => "digital comics",
-        "immagine" => "../../src/assets/img/buy-comics-merchandise.png",
-        "titolo" => "merchandise",
-        "immagine" => "../../src/assets/img/buy-comics-subscriptions.png",
-        "titolo" => "subscription",
-        "immagine" => ".../../src/assets/img/buy-comics-shop-locator.png",
-        "titolo" => "comics shop locator",
-        "immagine" => "../../src/assets/buy-dc-power-visa.svg",
-        "titolo" => "dc power visa",
+        ["immagine" => "../../src/assets/img/buy-comics-digital-comics.png",
+        "titolo" => "digital comics"],
+        ["immagine" => "../../src/assets/img/buy-comics-merchandise.png",
+        "titolo" => "merchandise"],
+        ["immagine" => "../../src/assets/img/buy-comics-subscriptions.png",
+        "titolo" => "subscription"],
+        ["immagine" => ".../../src/assets/img/buy-comics-shop-locator.png",
+        "titolo" => "comics shop locator"],
+        ["immagine" => "../../src/assets/buy-dc-power-visa.svg",
+        "titolo" => "dc power visa"],
     ];
-    return view('index', $comics, $headerLinks);
+
+    // $dcComicsLink: [
+    //     [ 'id' => '1', 'title' => "Characters", 'link' => "#"],
+
+    //      ['id' => 2, 'title' => "Comics", 'link' => "#" ],
+
+    //     { id: 3, title: "Movies", link: "#" },
+
+    //     { id: 4, title: "TV", link: "#" },
+
+    //     { id: 5, title: "Games", link: "#" },
+
+    //     { id: 6, title: "Videos", link: "#" },
+
+    //     { id: 7, title: "News", link: "#" }
+    // ],
+
+    // $shop: [
+    //     { id: 1, title: "Shop DC", link: "#" },
+        
+    //     { id: 2, title: "Shop DC Collectibles", link: "#" },
+    // ],
+
+    // $dc: [
+    //     { id: 1, title: "Term Of Use", link: "#" },
+
+    //     { id: 2, title: "Privacy Policy (New)", link: "#" },
+
+    //     { id: 3, title: "Ad Choices", link: "#" },
+
+    //     { id: 4, title: "Advertising", link: "#" },
+
+    //     { id: 5, title: "Jobs", link: "#" },
+
+    //     { id: 6, title: "Subscription", link: "#" },
+
+    //     { id: 7, title: "Tallene Workshop", link: "#" },
+
+    //     { id: 8, title: "CPSC Certificates", link: "#" },
+
+    //     { id: 9, title: "Ratings", link: "#" },
+
+    //     { id: 10, title: "Shop Help", link: "#" },
+
+    //     { id: 11, title: "Contact Us", link: "#" }
+    // ],
+
+    // $sites: [
+    //     { id: 1, title: "DC",  link: "#" },
+
+    //     { id: 2, title: "MAD Magazine",  link: "#" },
+
+    //     { id: 3, title: "DC Kids",  link: "#" },
+
+    //     { id: 4, title: "DC Universe",  link: "#" },
+
+    //     { id: 5, title: "DC Power Visa",  link: "#" }
+    // ],
+
+    // $socials = [
+    //     { id:1, social: 'facebook', url: './src/assets/img/footer-facebook.png' },
+
+    //     { id:2, social: 'twitter', url: './src/assets/img/footer-twitter.png' },
+
+    //     { id:3, social: 'youtube', url: './src/assets/img/footer-youtube.png' },
+
+    //     { id:4, social: 'pinterest', url: './src/assets/img/footer-pinterest.png' },
+
+    //     { id:5, social: 'periscope', url: './src/assets/img/footer-periscope.png' }
+    // ]
+
+
+
+
+
+
+
+    return view('index', $comics, compact("headerLinks"));
 })->name('home');
