@@ -6,9 +6,9 @@
         <section class="list-title">
 
             <ul>
-            @for($id = 0; $id < 10; $id++)
-                <li>{{ $title }}</li>
-            @endfor
+            @foreach($headerLinks as $headerLink)
+                <li>{{ $headerLink['title'] }}</li>
+            @endforeach
             </ul>
 
         </section>
