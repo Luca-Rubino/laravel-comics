@@ -1,5 +1,7 @@
 <main>
-    <section class="container">
+    @include('pages.products')
+    @yield('main-content')
+    {{-- <section class="container">
         <article>
             <h1>Current Series</h1>
             <div class="comics">
@@ -12,7 +14,7 @@
             </div>
             <button>Load More</button>
         </article>
-    </section>
+    </section> --}}
 
     <section class="comics">
         <ul>
