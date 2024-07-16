@@ -4,8 +4,11 @@
             <h1> Current Series</h1>
             <div class="comics">
                 <article>
-                    <img :src="singleComic.thumb" :alt="singleComic.series">
-                    <h4>series</h4>
+                    @foreach($singleComics as $singleComic)
+                        <img src="{{$singleComic['thumb']}}" alt="{{$singleComic['series']}}">
+                        <h4>{{$singleComic['series']}}</h4>    
+                    @endforeach
+                    
                 </article>
             </div>
             <button>Load More</button>
@@ -14,10 +17,13 @@
 
     <section class="comics">
         <ul>
-            <li v-for="(comics, index) in comics">
-                <img :src="comics.immagine" :alt="comics.titolo">
-                <p>titolo</p>
-            </li>
+            @foreach($comics as $comic)
+             <li>
+                <img src="{{ Vite::asset($comic['immagine']) }}" alt="{{ $comic['titolo']}}">
+                <p>{{ $comic['titolo']}}</p>
+            </li>   
+            @endforeach
+            
         </ul>
     </section>
 </main>
