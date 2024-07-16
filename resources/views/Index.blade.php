@@ -9,12 +9,10 @@
 </head>
 
 <body>
-<h1>Home</h1>
 
 @include('component.header')
 @include('component.main')
 @include('component.footer')
-
 
 </body>
 
