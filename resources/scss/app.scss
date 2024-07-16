@@ -162,9 +162,6 @@ main {
   }
 }
 
-
-
-
 // footer
 
 footer {
@@ -186,13 +183,6 @@ footer {
     background-position-x: 3.5rem;
     background-size: 420px 490px;
   }
-  
-  section:nth-of-type(2) {
-    article:first-of-type {
-        padding-left: 11.5rem;
-    }
-  }
-  
   nav {
     padding: 2rem 1rem 2rem 1.3rem;
   }
@@ -210,5 +200,31 @@ footer {
   
   img {
     height: 2rem;
+  }
+
+  section.botton-footer {
+    background-color: #303030;
+    padding: 2rem 0;
+
+    button {
+        border: 1px solid #008cff;
+        background: transparent;
+        padding: .8rem;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h2 {
+        margin-right: 1.2rem;
+        color: #0380f6;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+
+    img {
+        margin-right: 1rem;
+    }
   }
 }
