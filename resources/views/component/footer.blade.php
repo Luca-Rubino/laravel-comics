@@ -60,7 +60,7 @@
         <article class="d-flex">
             <h2>follow us</h2>
             @foreach($socials as $social)
-                <img src="{{ $social['url'] }}" alt="{{ $social['social'] }}">   
+                <img src="{{ Vite::asset($social['url']) }}" alt="{{ $social['social'] }}">   
             @endforeach
             
         </article>
